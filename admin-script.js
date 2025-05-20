@@ -19,63 +19,6 @@ if (localStorage.getItem('theme') === 'dark') {
     document.body.setAttribute('data-theme', 'dark');
 }
 
-// Sales Chart
-const salesCtx = document.getElementById('salesChart').getContext('2d');
-const salesChart = new Chart(salesCtx, {
-    type: 'line',
-    data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
-        datasets: [{
-            label: 'Monthly Sales (KSh)',
-            data: [120000, 150000, 180000, 160000, 190000, 210000, 200000, 220000, 230000, 240000, 248750],
-            borderColor: 'rgba(0, 128, 55, 1)',
-            backgroundColor: 'rgba(0, 128, 55, 0.1)',
-            tension: 0.4,
-            fill: true
-        }]
-    },
-    options: {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'top',
-            }
-        },
-        scales: {
-            y: {
-                beginAtZero: false
-            }
-        }
-    }
-});
-
-// Category Chart
-const categoryCtx = document.getElementById('categoryChart').getContext('2d');
-const categoryChart = new Chart(categoryCtx, {
-    type: 'doughnut',
-    data: {
-        labels: ['Fertilizers', 'Pesticides', 'Animal Feed', 'Farm Tools', 'Dairy Equipment'],
-        datasets: [{
-            data: [35, 20, 25, 12, 8],
-            backgroundColor: [
-                'rgba(0, 128, 55, 0.8)',
-                'rgba(243, 146, 0, 0.8)',
-                'rgba(41, 98, 255, 0.8)',
-                'rgba(111, 66, 193, 0.8)',
-                'rgba(220, 53, 69, 0.8)'
-            ],
-            borderWidth: 0
-        }]
-    },
-    options: {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'right',
-            }
-        }
-    }
-});
 
 // Animate elements on scroll
 const animateOnScroll = () => {
