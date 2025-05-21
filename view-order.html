@@ -200,6 +200,142 @@
                     gap: 15px;
                 }
             }
+
+
+
+
+
+            /* Shipping */
+                .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    header .order-id a {
+      color: var(--orange);
+      font-weight: bold;
+      text-decoration: none;
+    }
+    header .order-id strong {
+      font-weight: bold;
+    }
+    header .details {
+      text-align: right;
+      font-size: 0.7rem;
+      font-weight: 400;
+    }
+    header .details span {
+      font-family: monospace;
+      display: block;
+      margin-top: 0.1rem;
+    }
+
+    /* Progress bar container */
+    .progress-container {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      user-select: none;
+    }
+
+    /* Lines connecting circles */
+    .line {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 4px;
+      background-color: var(--orange);
+      z-index: 1;
+      transition: background-color 0.3s ease;
+    }
+    .line.horizontal {
+      height: 4px;
+      top: 50%;
+      left: 3.5rem;
+      right: 3.5rem;
+      transform: translateY(-50%);
+      background-color: var(--orange);
+      z-index: 1;
+    }
+
+    /* Circles */
+    .step {
+      position: relative;
+      z-index: 10;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background-color: var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-weight: bold;
+      font-size: 1.25rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      user-select: none;
+    }
+    .step.completed {
+      background-color: var(--green);
+    }
+    .step.inactive {
+      background-color: #bbb;
+      cursor: default;
+    }
+    .step .checkmark {
+      font-size: 1.25rem;
+      display: none;
+    }
+    .step.completed .checkmark {
+      display: block;
+    }
+    .step-number {
+      display: none;
+    }
+    .step-icon {
+      font-size: 1.25rem;
+      pointer-events: none;
+    }
+
+    /* Labels below each step */
+    .labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.75rem;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: #000;
+      user-select: none;
+    }
+    .labels div {
+      width: 2.5rem;
+      text-align: center;
+      line-height: 1.2;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .labels div span {
+      display: block;
+      font-weight: 400;
+      font-size: 0.6rem;
+      margin-top: 0.15rem;
+      color: #222;
+    }
+    .labels div.active {
+      color: var(--green);
+      font-weight: 700;
+    }
+
     </style>
 
 </head>
@@ -310,6 +446,60 @@
                                 <button class="btn btn-email"><i class="fas fa-envelope"></i> Email</button>
                             </div>
                         </div>
+
+                        <div class="container" role="main" aria-label="Order progress tracker">
+                            <header>
+                            <div class="order-id" aria-label="Order ID">
+                                <strong>ORDER</strong> <a href="#" tabindex="-1">#GF-2025-0582</a>
+                            </div>
+                            <div class="details" aria-label="Expected arrival and tracking number">
+                                <div>Expected Arrival 24/05/2025</div>
+                             
+                            </div>
+                            </header>
+
+                            <div class="progress-container" aria-live="polite" aria-atomic="true" aria-relevant="additions removals">
+                            <div class="line horizontal"></div>
+
+
+                            <!-- Steps with icons -->
+                            <div class="step" data-step="1" tabindex="0" role="button" aria-pressed="false" aria-label="Step 1: Order Requested">
+                                <i class="fas fa-file-alt step-icon" aria-hidden="true" title="Order Requested"></i>
+                                <span class="checkmark" aria-hidden="true">✓</span>
+                            </div>
+                            <div class="step" data-step="2" tabindex="0" role="button" aria-pressed="false" aria-label="Step 2: Order Processed">
+                                <i class="fas fa-cogs step-icon" aria-hidden="true" title="Order Processed"></i>
+                                <span class="checkmark" aria-hidden="true">✓</span>
+                            </div>
+                            <div class="step" data-step="3" tabindex="0" role="button" aria-pressed="false" aria-label="Step 3: Approved by Agent">
+                                <i class="fas fa-user-check step-icon" aria-hidden="true" title="Approved by Agent"></i>
+                                <span class="checkmark" aria-hidden="true">✓</span>
+                            </div>
+                            <div class="step" data-step="4" tabindex="0" role="button" aria-pressed="false" aria-label="Step 4: Ready for Shipment">
+                                <i class="fas fa-box-open step-icon" aria-hidden="true" title="Ready for Shipment"></i>
+                                <span class="checkmark" aria-hidden="true">✓</span>
+                            </div>
+                            <div class="step" data-step="5" tabindex="0" role="button" aria-pressed="false" aria-label="Step 5: Shipping in Progress">
+                                <i class="fas fa-truck step-icon" aria-hidden="true" title="Shipping in Progress"></i>
+                                <span class="checkmark" aria-hidden="true">✓</span>
+                            </div>
+                            <div class="step" data-step="6" tabindex="0" role="button" aria-pressed="false" aria-label="Step 6: Delivered">
+                                <i class="fas fa-home step-icon" aria-hidden="true" title="Delivered"></i>
+                                <span class="checkmark" aria-hidden="true">✓</span>
+                            </div>
+                            </div>
+
+                            <div class="labels" aria-hidden="true">
+                            <div data-step="1">Order<br /><span>Requested</span></div>
+                            <div data-step="2">Order<br /><span>Processed</span></div>
+                            <div data-step="3">Agent<br /><span>Approved</span></div>
+                            <div data-step="4">Ready<br /><span>for Shipment</span></div>
+                            <div data-step="5">Shipping<br /><span>In Progress</span></div>
+                            <div data-step="6">Delivered<br /><span>Completed</span></div>
+                            </div>
+                        </div>
+                        <br>
+
 
                         <div class="order-summary">
                             <div class="summary-card">
@@ -459,6 +649,115 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <script src="admin-script.js">
        
+    </script>
+
+    <script>
+        (() => {
+      const steps = Array.from(document.querySelectorAll('.step'));
+      const labels = Array.from(document.querySelectorAll('.labels div'));
+      const linesDesktop = document.querySelector('.line.horizontal');
+      const linesMobile = {
+        '1-2': document.getElementById('line-1-2'),
+        '2-3': document.getElementById('line-2-3'),
+        '3-4': document.getElementById('line-3-4'),
+        '4-5': document.getElementById('line-4-5'),
+        '5-6': document.getElementById('line-5-6'),
+      };
+
+      let currentStep = 1;
+
+      function updateProgress(step) {
+        currentStep = step;
+
+        steps.forEach((el) => {
+          const stepNum = Number(el.dataset.step);
+          if (stepNum < step) {
+            el.classList.add('completed');
+            el.classList.remove('inactive');
+            el.setAttribute('aria-pressed', 'true');
+          } else if (stepNum === step) {
+            el.classList.add('completed');
+            el.classList.remove('inactive');
+            el.setAttribute('aria-pressed', 'true');
+          } else {
+            el.classList.remove('completed');
+            el.classList.add('inactive');
+            el.setAttribute('aria-pressed', 'false');
+          }
+        });
+
+        labels.forEach((label) => {
+          const labelStep = Number(label.dataset.step);
+          if (labelStep === step) {
+            label.classList.add('active');
+          } else {
+            label.classList.remove('active');
+          }
+        });
+
+       
+        if (window.innerWidth > 640) {
+         
+          document.querySelectorAll('.partial-line').forEach(el => el.remove());
+      
+          const container = document.querySelector('.progress-container');
+          const stepPositions = steps.map(s => s.offsetLeft + s.offsetWidth / 2);
+
+          for (let i = 1; i < currentStep; i++) {
+            const start = stepPositions[i - 1];
+            const end = stepPositions[i];
+            const partialLine = document.createElement('div');
+            partialLine.classList.add('partial-line');
+            partialLine.style.position = 'absolute';
+            partialLine.style.top = '50%';
+            partialLine.style.height = '4px';
+            partialLine.style.backgroundColor = 'var(--green)';
+            partialLine.style.transform = 'translateY(-50%)';
+            partialLine.style.left = `${start}px`;
+            partialLine.style.width = `${end - start}px`;
+            partialLine.style.zIndex = '5';
+            container.appendChild(partialLine);
+          }
+          linesDesktop.style.backgroundColor = 'var(--orange)';
+        } else {
+         
+          Object.entries(linesMobile).forEach(([key, line]) => {
+            const [start, end] = key.split('-').map(Number);
+            if (currentStep > start) {
+              line.style.backgroundColor = 'var(--green)';
+            } else {
+              line.style.backgroundColor = 'var(--orange)';
+            }
+          });
+        }
+      }
+
+      // Click or keyboard event handler for steps and labels
+      function onStepClick(e) {
+        const step = Number(e.currentTarget.dataset.step);
+        updateProgress(step);
+      }
+
+      steps.forEach(step => {
+        step.addEventListener('click', onStepClick);
+        step.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            onStepClick(e);
+          }
+        });
+      });
+      labels.forEach(label => {
+        label.addEventListener('click', onStepClick);
+      });
+
+      // Initialize progress
+      updateProgress(1);
+
+      window.addEventListener('resize', () => {
+        updateProgress(currentStep);
+      });
+    })();
     </script>
 </body>
 </html>

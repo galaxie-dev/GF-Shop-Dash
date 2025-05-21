@@ -123,6 +123,32 @@
                         </div>
                     </div>
 
+                     <div class="stat-card animate-fadeIn delay-1">
+                        <div class="stat-icon" style="background-color: var(--green);">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-title">Items Sold</div>
+                            <div class="stat-value">4,339 Units</div>
+                            <div class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i> 5.7% from last month
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="stat-card animate-fadeIn delay-1">
+                        <div class="stat-icon" style="background-color: var(--green);">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-title">Total Sales</div>
+                            <div class="stat-value">KSh 248,750</div>
+                            <div class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i> 12.5% from last month
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="stat-card animate-fadeIn delay-2">
                         <div class="stat-icon" style="background-color: var(--orange);">
                             <i class="fas fa-box-open"></i>
@@ -168,248 +194,54 @@
 
 
                 <!-- Charts Row -->
-                <div class="chart-container">
-                    <div class="card chart-card animate-fadeIn">
-                        <div class="card-header">
-                            <div class="card-title">Sales Analytics</div>
-                            <div class="card-actions">
-                                <button class="btn btn-secondary btn-sm">
-                                    <i class="fas fa-calendar"></i> This Month
-                                </button>
+                    <section class="data-row">
+                        <!-- short Card -->
+                        <article class="short-card">
+                            <div>
+                            <h2>Card 1</h2>
+                            <p>Sales Graph</p>
                             </div>
-                        </div>
-                        <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Profile</th>                                   
-                                    <th>Name</th>
-                                    <th>Role</th>                                   
-                                    <th>Location</th>
-                                    <th>View User</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td ><img src="images/GaniFarmLogo.png" style="height: 25px; width: 25px; border-radius: 50%;"></td>                                
-                                    <td>John Kamau</td>
-                                    <td>Farmer</td>                                    
-                                    <td>Limuru</td>
-                                    <td><a href="user-profile.html"><button class="action-btn"><i class="fas fa-eye"></i></button></a></td>
-                                </tr>
-                                <tr>
-                                    <td ><img src="images/reviewer-1.jpg" style="height: 25px; width: 25px; border-radius: 50%;"></td>                                
-                                    <td>Mary Wambui</td>
-                                    <td>Farmer</td>                                   
-                                    <td>Kajiado</td>
-                                    <td><a href="user-profile.html"><button class="action-btn"><i class="fas fa-eye"></i></button></a></td>
-                                </tr>
-                                <tr>
-                                    <td ><img src="images/reviewer-2.jpg" style="height: 25px; width: 25px; border-radius: 50%;"></td>                              
-                                    <td>Peter Kariuki</td>
-                                    <td>Delivery</td>                                    
-                                    <td>N/A</td>
-                                    <td><a href="user-profile.html"><button class="action-btn"><i class="fas fa-eye"></i></button></a></td>
-                                </tr>
-                                <tr>
-                                    <td ><img src="images/coffeefarm.png" style="height: 25px; width: 25px; border-radius: 50%;"></td>
-                                    <td>Grace Muthoni</td>
-                                    <td>Buyer</td>                               
-                                    <td>N/A</td>
-                                    <td><a href="user-profile.html"><button class="action-btn"><i class="fas fa-eye"></i></button></a></td>
-                                </tr>
-                                <tr>
-                                    <td ><img src="images/reviewer-3.jpg" style="height: 25px; width: 25px; border-radius: 50%;"></td>
-                                    <td>James Mutua</td>
-                                    <td>Buyer</td>
-                                    <td>Machakos</td>
-                                    <td><a href="user-profile.html"><button class="action-btn"><i class="fas fa-eye"></i></button></a></td>
-                                </tr>
-                                <tr>
-                                    <td ><img src="images/GaniFarmLogo.png" style="height: 25px; width: 25px; border-radius: 50%;"></td>
-                                    <td>John Kamau</td>
-                                    <td>Farmer</td>                          
-                                    <td>N/A</td>
-                                    <td><a href="user-profile.html"><button class="action-btn"><i class="fas fa-eye"></i></button></a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        </div>
+                        </article>
 
 
+                        
+                        <!-- long Card -->
+                        <article class="long-card" aria-label="shop data">
+                            <div>
+                            <h2>Card 2</h2>
+                            <p>Frequent Customers</p>
+                            </div>
+                        </article>
+                    </section>
+                    <br>
 
+                    <section class="data-row">
+                        <!-- long Card -->
+                        <article class="long-card" aria-label="shop data">
+                            <div>
+                            <h2>Card 3</h2>
+                            <p>Orders Completed</p>
+                            </div>
+                        </article>
 
-                        <!-- <canvas id="salesChart" height="300"></canvas> -->
-                    </div>
-
-                    <div class="card chart-card animate-fadeIn">
-                        <div class="card-header">
-                            <div class="card-title">Top Selling Categories</div>
-                        </div>
-                        <canvas id="categoryChart" height="300"></canvas>
-                    </div>
-                </div>
-
-
-
-
-                   <div class="chart-container">
-                   <div class="card chart-card animate-fadeIn">
-                        <div class="card-header">
-                            <div class="card-title">Most Frequent Customers</div>
-                        </div>
-                     
-                    </div>
-                
+                        <!-- short Card -->
+                        <article class="short-card">
+                            <div>
+                            <h2>Card 4</h2>
+                            <p>Shop data</p>
+                            </div>
+                        </article>     
+                    
+                    </section>
                
-                    <div class="card chart-card animate-fadeIn">
-                        <div class="card-header">
-                            <div class="card-title">Advert Analytics</div>
-                            <div class="card-actions">
-                                <button class="btn btn-secondary btn-sm">
-                                    <i class="fas fa-calendar"></i> This Month
-                                </button>
-                            </div>
-                        </div>
-                        <canvas id="salesChart" height="300"></canvas>
-                    </div>
-                   </div>
 
-                 
-
-
-              
-
-                <!-- Frequent users -->
-                <div class="card animate-fadeIn">
-                    <div class="card-header">
-                        <div class="card-title">Most Frequent customers</div>                     
-                    </div>
-
-
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Profile</th>                                   
-                                    <th>Name</th>
-                                    <th>Role</th>                                   
-                                    <th>Location</th>
-                                    <th>View User</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td ><img src="images/GaniFarmLogo.png" style="height: 25px; width: 25px; border-radius: 50%;"></td>                                
-                                    <td>John Kamau</td>
-                                    <td>Farmer</td>                                    
-                                    <td>Limuru</td>
-                                    <td><a href="user-profile.html"><button class="action-btn"><i class="fas fa-eye"></i></button></a></td>
-                                </tr>
-                                <tr>
-                                    <td ><img src="images/reviewer-1.jpg" style="height: 25px; width: 25px; border-radius: 50%;"></td>                                
-                                    <td>Mary Wambui</td>
-                                    <td>Farmer</td>                                   
-                                    <td>Kajiado</td>
-                                    <td><a href="user-profile.html"><button class="action-btn"><i class="fas fa-eye"></i></button></a></td>
-                                </tr>
-                                <tr>
-                                    <td ><img src="images/reviewer-2.jpg" style="height: 25px; width: 25px; border-radius: 50%;"></td>                              
-                                    <td>Peter Kariuki</td>
-                                    <td>Delivery</td>                                    
-                                    <td>N/A</td>
-                                    <td><a href="user-profile.html"><button class="action-btn"><i class="fas fa-eye"></i></button></a></td>
-                                </tr>
-                                <tr>
-                                    <td ><img src="images/coffeefarm.png" style="height: 25px; width: 25px; border-radius: 50%;"></td>
-                                    <td>Grace Muthoni</td>
-                                    <td>Buyer</td>                               
-                                    <td>N/A</td>
-                                    <td><a href="user-profile.html"><button class="action-btn"><i class="fas fa-eye"></i></button></a></td>
-                                </tr>
-                                <tr>
-                                    <td ><img src="images/reviewer-3.jpg" style="height: 25px; width: 25px; border-radius: 50%;"></td>
-                                    <td>James Mutua</td>
-                                    <td>Buyer</td>
-                                    <td>Machakos</td>
-                                    <td><a href="user-profile.html"><button class="action-btn"><i class="fas fa-eye"></i></button></a></td>
-                                </tr>
-                                <tr>
-                                    <td ><img src="images/GaniFarmLogo.png" style="height: 25px; width: 25px; border-radius: 50%;"></td>
-                                    <td>John Kamau</td>
-                                    <td>Farmer</td>                          
-                                    <td>N/A</td>
-                                    <td><a href="user-profile.html"><button class="action-btn"><i class="fas fa-eye"></i></button></a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+            
             </div>
         </main>
                 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <script src="admin-script.js">    
-    </script>
-    <script>
-        // Sales Chart
-            const salesCtx = document.getElementById('salesChart').getContext('2d');
-            const salesChart = new Chart(salesCtx, {
-                type: 'line',
-                data: {
-                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
-                    datasets: [{
-                        label: 'Monthly Sales (KSh)',
-                        data: [120000, 150000, 180000, 160000, 190000, 210000, 200000, 220000, 230000, 240000, 248750],
-                        borderColor: 'rgba(0, 128, 55, 1)',
-                        backgroundColor: 'rgba(0, 128, 55, 0.1)',
-                        tension: 0.4,
-                        fill: true
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: false
-                        }
-                    }
-                }
-            });
-
-            // Category Chart
-            const categoryCtx = document.getElementById('categoryChart').getContext('2d');
-            const categoryChart = new Chart(categoryCtx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Fertilizers', 'Pesticides', 'Animal Feed', 'Farm Tools', 'Dairy Equipment'],
-                    datasets: [{
-                        data: [35, 20, 25, 12, 8],
-                        backgroundColor: [
-                            'rgba(0, 128, 55, 0.8)',
-                            'rgba(243, 146, 0, 0.8)',
-                            'rgba(41, 98, 255, 0.8)',
-                            'rgba(111, 66, 193, 0.8)',
-                            'rgba(220, 53, 69, 0.8)'
-                        ],
-                        borderWidth: 0
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'right',
-                        }
-                    }
-                }
-            });
-    </script>
+    </script>   
 </body>
 </html>

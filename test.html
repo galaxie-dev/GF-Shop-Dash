@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Dashboard</title>
+
+  <style>
+
+
+   
+    .data-row {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .row > * {
+      flex-shrink: 0;
+    }
+    /* Cards */
+    .short-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30%;
+      height: 250px;
+    }
+
+
+    /* long card */
+    .long-card {
+      flex: 1;
+      width: 70%;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+      background: white;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="data-row">
+      <!-- short Card -->
+      <article class="short-card">
+        <div>
+          <h2>Card 1</h2>
+          <p>Shop data</p>
+        </div>
+        </article>
+
+
+      
+      <!-- long Card -->
+      <article class="long-card" aria-label="shop data">
+         <div>
+          <h2>Card 2</h2>
+          <p>Shop data</p>
+        </div>
+      </article>
+    </section>
+    <br>
+     <section class="data-row">
+         <!-- long Card -->
+      <article class="long-card" aria-label="shop data">
+         <div>
+          <h2>Card 2</h2>
+          <p>Shop data</p>
+        </div>
+      </article>
+
+      <!-- short Card -->
+      <article class="short-card">
+        <div>
+          <h2>Card 1</h2>
+          <p>Shop data</p>
+        </div>
+        </article>     
+     
+    </section>
+
+
+
+
+
+
+
+
+  </main>
+</body>
+</html>
